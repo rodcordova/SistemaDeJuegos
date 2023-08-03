@@ -31,3 +31,7 @@ def gov(Anio: str):
 @app.get('/asr/{Año}')  
 def asr(Anio: str):
     return Anio
+
+@app.get('/pasr/{Año}')  
+def pasr(Anio: str):
+    return Anio
