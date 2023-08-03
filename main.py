@@ -28,6 +28,6 @@ def generes(Anio: str):
 def gov(Anio: str):
     return Anio
 
-@app.get('/ar/{Año}')  
-def ar(Anio: str):
+@app.get('/asr/{Año}')  
+def asr(Anio: str):
     return Anio
