@@ -4,6 +4,7 @@ import pandas as pd
 import json
 import numpy as np
 import ast
+from model import modelo_predict
 
 app = FastAPI()
 
@@ -151,4 +152,23 @@ def metascore(Anio: str):
 
     return response
 
+import joblib
 
+# Cargar el modelo desde el archivo
+modelo_filename = 'modelo_regresion.pkl'  # Reemplaza con el nombre real de tu archivo
+loaded_model = joblib.load(modelo_filename)
+
+@app.get("/modelo de prediccion")
+def prediccion(
+    genres:str,
+    release_year:int ,
+    metascore:int,
+    app_name:str ):
+
+    respuesta=modelo_predict(genres,release_year,metascore,app_name)
+    
+
+    # Convertimos el diccionario a JSON
+    json_data = json.dumps(respuesta, indent=4)
+    response = Response(content=json_data, media_type="application/json")
+    return response
