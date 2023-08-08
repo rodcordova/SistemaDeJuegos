@@ -76,9 +76,9 @@ def modelo_predict(
 # Realizar predicción para los valores dados
     input_data = {
         "genres": [genres],
-        "release_year": [anio],
+        "release_year": [release_year],
         "metascore": [metascore],
-        "app_name": [game]  # Agregar el nombre del nuevo juego
+        "app_name": [app_name]  # Agregar el nombre del nuevo juego
     }
 
     input_df = pd.DataFrame(input_data)
