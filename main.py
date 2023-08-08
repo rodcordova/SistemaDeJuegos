@@ -8,7 +8,7 @@ from model import modelo_predict
 
 app = FastAPI()
 
-df = pd.read_csv("Dataset/ds_clean.csv")
+df = pd.read_csv("Datasets/ds_clean.csv")
 
 @app.get('/genero/{Año}')  
 def genero(Anio: str):
