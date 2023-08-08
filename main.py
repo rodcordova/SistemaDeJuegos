@@ -165,8 +165,8 @@ def prediccion(
     metascore:int,
     app_name:str ):
 
-    respuesta=modelo_predict(genres,release_year,metascore,app_name)
-    
+    #respuesta=modelo_predict(genres,release_year,metascore,app_name)
+    respuesta={juegos:'hola'}
 
     # Convertimos el diccionario a JSON
     json_data = json.dumps(respuesta, indent=4)
