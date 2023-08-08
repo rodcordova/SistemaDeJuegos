@@ -5,3 +5,4 @@ FastApi
 matplotlib 
 scikit-learn
 seaborn
+nltk
