@@ -152,11 +152,6 @@ def metascore(Anio: str):
 
     return response
 
-import joblib
-
-# Cargar el modelo desde el archivo
-modelo_filename = 'modelo_regresion.pkl'  # Reemplaza con el nombre real de tu archivo
-loaded_model = joblib.load(modelo_filename)
 
 @app.get("/modelo de prediccion")
 def prediccion(
